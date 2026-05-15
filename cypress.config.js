@@ -7,10 +7,9 @@ module.exports = defineConfig({
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    baseUrl: 'https://telnyx.com',
-    projectId: 'telnyx-e2e-tests',
+    baseUrl: "https://telnyx.com",
+    projectId: "yfk9q4",
     viewportWidth: 1280,
-    viewportHeight: 720
-    
+    viewportHeight: 720,
   },
 });

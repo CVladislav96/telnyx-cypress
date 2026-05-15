@@ -1,122 +1,117 @@
-
 class HomePage {
-    
-    visit() {
-        cy.visit('/')
-        return this 
-    }
+  visit() {
+    cy.visit("/");
+    return this;
+  }
 
-    getLogo() {
-        return cy.get('img[alt="Telnyx - Global Communications Platform Provider"]')
-    }
+  getLogo() {
+    return cy.get(
+      'img[alt="Telnyx - Global Communications Platform Provider"]',
+    );
+  }
 
-    getProductsButton() { 
-        return cy.get('[id="radix-_R_4b9iivb_"]') 
-    }
+  getProductsButton() {
+    return cy.get('[id="radix-_R_4b9iivb_"]');
+  }
 
-    getSolutionButton() { 
-        return cy.get('[id="radix-_R_4j9iivb_"]') 
-    }
+  getSolutionButton() {
+    return cy.get('[id="radix-_R_4j9iivb_"]');
+  }
 
-    getPricingButton() { 
-        return cy.get('[id="radix-_R_4r9iivb_"]') 
-    }
+  getPricingButton() {
+    return cy.get('[id="radix-_R_4r9iivb_"]');
+  }
 
-    getWhyTelnyxButton() { 
-        return cy.get('[id="radix-_R_539iivb_"]') 
-    }
+  getWhyTelnyxButton() {
+    return cy.get('[id="radix-_R_539iivb_"]');
+  }
 
-    getResourcesButton() { 
-        return cy.get('[id="radix-_R_5b9iivb_"]') 
-    }
+  getResourcesButton() {
+    return cy.get('[id="radix-_R_5b9iivb_"]');
+  }
 
-    getDevelopersButton() {
-        return cy.get('[id="radix-_R_5j9iivb_"]')
-    }
+  getDevelopersButton() {
+    return cy.get('[id="radix-_R_5j9iivb_"]');
+  }
 
-    getContactUsButton() {
-        return cy.contains('a', 'Contact us')
-    }
+  getContactUsButton() {
+    return cy.contains("a", "Contact us");
+  }
 
-    getLogInButton() { 
-        return cy.get('a[href="https://portal.telnyx.com"]').eq(1) 
-    }
+  getLogInButton() {
+    return cy.get('a[href="https://portal.telnyx.com"]').eq(1);
+  }
 
-    getSignUpButton() { 
-        return cy.get('[href="/sign-up"]').first() 
-    }
+  getSignUpButton() {
+    return cy.get('[href="/sign-up"]').first();
+  }
 
-    getNavbar() {
-        return {
-            logo: this.getLogo(),
-            products: this.getProductsButton(),
-            solution: this.getSolutionButton(),
-            pricing: this.getPricingButton(),
-            whyTelnyx: this.getWhyTelnyxButton(),
-            resources: this.getResourcesButton(),
-            developers: this.getDevelopersButton(),
-            contact: this.getContactUsButton(),
-            login: this.getLogInButton(),
-            signup: this.getSignUpButton()
-        };
-    }
+  getNavbar() {
+    return {
+      logo: this.getLogo(),
+      products: this.getProductsButton(),
+      solution: this.getSolutionButton(),
+      pricing: this.getPricingButton(),
+      whyTelnyx: this.getWhyTelnyxButton(),
+      resources: this.getResourcesButton(),
+      developers: this.getDevelopersButton(),
+      contact: this.getContactUsButton(),
+      login: this.getLogInButton(),
+      signup: this.getSignUpButton(),
+    };
+  }
 
-    getHeroTitle() { 
-        return cy.get('[id="hero-headline"]') 
-    }
+  getHeroTitle() {
+    return cy.get('[id="hero-headline"]');
+  }
 
-    getHeroCtaButton() { 
-        return cy.contains('TALK TO AN EXPERT') 
-    }
+  getHeroCtaButton() {
+    return cy.contains("TALK TO AN EXPERT");
+  }
 
-    getDropdownProducts() { 
-        return cy.get('[id="radix-_R_4b9iivbH1_"]') 
-    }
+  getDropdownProducts() {
+    return cy.get('[id="radix-_R_4b9iivbH1_"]');
+  }
 
-    getViewAllProductsButton() { 
-        return cy.get('[data-content="View all products"]') 
-    }
+  getViewAllProductsButton() {
+    return cy.get('[data-content="View all products"]');
+  }
 
-    getDropdownPricing() {
-        return cy.get('[id="radix-_R_4r9iivbH1_"]')
-    }
+  getDropdownPricing() {
+    return cy.get('[id="radix-_R_4r9iivbH1_"]');
+  }
 
-    getViewAllPricingButton() {
-        return cy.get('[data-content="View all pricing"]')
-    }
+  getViewAllPricingButton() {
+    return cy.get('[data-content="View all pricing"]');
+  }
 
+  getInputChatToAnAgent(message) {
+    return cy.get('[placeholder="Type message here"]').type(message);
+  }
 
+  getSendButton() {
+    return cy.get('[type="submit"]');
+  }
 
-    getInputChatToAnAgent(message) {
-        return cy.get('[placeholder="Type message here"]').type(message)
-    }
+  getFooter() {
+    return cy.get('[id="site-footer"]');
+  }
 
-    getSendButton() {
-        return cy.get('[type="submit"]')
-    }
+  getPrivacyPolicyLink() {
+    return cy.get('[href="/privacy-policy"]');
+  }
 
-    
+  getTermsOfServiceLink() {
+    return cy.get('[href="/terms-and-conditions-of-service"]');
+  }
 
-    getFooter() { 
-        return cy.get('[id="site-footer"]') 
-    }
+  getFooterLogo() {
+    return cy.get('[clip-path="url(#_R_fiivb_)"]');
+  }
 
-    getPrivacyPolicyLink() { 
-        return cy.get('[href="/privacy-policy"]') 
-    }
-
-    getTermsOfServiceLink() { 
-        return cy.get('[href="/terms-and-conditions-of-service"]') 
-    }
-
-    getFooterLogo() { 
-        return cy.get('[clip-path="url(#_R_fiivb_)"]')
-    }
-
-    getExploreOurAiAssistantButton() {
-        return cy.get('a[href="/products/voice-ai-agents"]')
-    }
-
+  getExploreOurAiAssistantButton() {
+    return cy.get('a[href="/products/voice-ai-agents"]');
+  }
 }
 
-export default HomePage
+export default HomePage;
