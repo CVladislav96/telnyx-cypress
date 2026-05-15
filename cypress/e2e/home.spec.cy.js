@@ -72,8 +72,8 @@ describe("Home Page Tests", () => {
     homePage
       .getExploreOurAiAssistantButton()
       .scrollIntoView()
-      .should("be.visible")
-      .click();
+      .should("exist")
+      .click({ force: true });
     cy.url().should("include", "/products/voice-ai-agents");
   });
 

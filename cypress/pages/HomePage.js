@@ -110,7 +110,7 @@ class HomePage {
   }
 
   getExploreOurAiAssistantButton() {
-    return cy.get('a[href="/products/voice-ai-agents"]');
+    return cy.get('[data-content="EXPLORE OUR AI ASSISTANT"]');
   }
 }
 
