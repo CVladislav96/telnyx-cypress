@@ -11,5 +11,7 @@ module.exports = defineConfig({
     projectId: "yfk9q4",
     viewportWidth: 1280,
     viewportHeight: 720,
+    video: true, //
+    screenshotOnRunFailure: true,
   },
 });
